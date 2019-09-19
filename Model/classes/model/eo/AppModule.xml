@@ -187,6 +187,9 @@
   <ViewUsage
     Name="UserInviteesView5"
     ViewObjectName="model.vo.UserInviteesView"/>
+  <ViewUsage
+    Name="ContactsView4"
+    ViewObjectName="model.vo.ContactsView"/>
   <ViewLinkUsage
     Name="ContinvcontactsFkv2Link1"
     ViewLinkObjectName="model.vo.ContinvcontactsFkv2Link"
@@ -372,5 +375,11 @@
     ViewLinkObjectName="model.vo.opportunityAppointmentUserInvitees"
     SrcViewUsageName="model.eo.AppModule.AppointmentView2"
     DstViewUsageName="model.eo.AppModule.UserInviteesView5"
+    Reversed="false"/>
+  <ViewLinkUsage
+    Name="opportunityMainContactSubContactViewLink1"
+    ViewLinkObjectName="model.vo.opportunityMainContactSubContactViewLink"
+    SrcViewUsageName="model.eo.AppModule.ContactOppurtunityView3"
+    DstViewUsageName="model.eo.AppModule.ContactsView4"
     Reversed="false"/>
 </AppModule>

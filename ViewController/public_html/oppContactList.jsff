@@ -13,7 +13,7 @@
       </af:panelGroupLayout>
     </f:facet>
     <af:panelGroupLayout layout="vertical" id="pgl1">
-      <af:panelHeader text="ContactOppurtunity" id="ph1">
+      <af:panelHeader text="Contacts" id="ph1">
         <af:query id="qryId1" headerText="Search" disclosed="true" value="#{bindings.nameQuery.queryDescriptor}"
                   model="#{bindings.nameQuery.queryModel}" queryListener="#{bindings.nameQuery.processQuery}"
                   queryOperationListener="#{bindings.nameQuery.processQueryOperation}" resultComponentId="::resId1"/>
@@ -27,8 +27,8 @@
                 partialTriggers="::b1 ::b2" columnStretching="last">
         <af:column sortProperty="#{bindings.ContactOppurtunityView3.hints.ContactName.name}" sortable="true"
                    headerText="#{bindings.ContactOppurtunityView3.hints.ContactName.label}" id="resId1c1">
-          <af:outputText value="#{row.ContactName}"
-                         shortDesc="#{bindings.ContactOppurtunityView3.hints.ContactName.tooltip}" id="ot1"/>
+          <af:link shortDesc="#{bindings.ContactOppurtunityView3.hints.ContactName.tooltip}" id="ot1"
+                   text="#{row.ContactName}" action="contactView"/>
         </af:column>
         <af:column sortProperty="#{bindings.ContactOppurtunityView3.hints.Email.name}" sortable="true"
                    headerText="#{bindings.ContactOppurtunityView3.hints.Email.label}" id="resId1c2">

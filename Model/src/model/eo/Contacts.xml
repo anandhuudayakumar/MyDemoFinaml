@@ -377,6 +377,13 @@
     AssociationOtherEnd="model.eo.ContactsOpportunitiesFkAssoc.Contacts"
     Type="oracle.jbo.server.EntityImpl"
     IsUpdateable="true"/>
+  <AccessorAttribute
+    Name="ContactOppurtunity1"
+    Association="model.eo.opportunityMainContactSubContactAssociation"
+    AssociationEnd="model.eo.opportunityMainContactSubContactAssociation.ContactOppurtunity1"
+    AssociationOtherEnd="model.eo.opportunityMainContactSubContactAssociation.Contacts1"
+    Type="oracle.jbo.server.EntityImpl"
+    IsUpdateable="true"/>
   <Key
     Name="ContactsPk"
     PrimaryKey="true">

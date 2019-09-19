@@ -25,6 +25,7 @@
     <page path="/opportunityAppointmentEdit.jsff" usageId="view_opportunityAppointmentEditPageDef"/>
     <page path="/UserInviteesAdd.jsff" usageId="view_UserInviteesAddPageDef"/>
     <page path="/ContactInviteesAdd.jsff" usageId="view_ContactInviteesAddPageDef"/>
+    <page path="/contactViewPage.jsff" usageId="view_contactViewPagePageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="view_opportunityListPageDef" path="view.pageDefs.opportunityListPageDef"/>
@@ -45,6 +46,7 @@
     <page id="view_opportunityAppointmentEditPageDef" path="view.pageDefs.opportunityAppointmentEditPageDef"/>
     <page id="view_UserInviteesAddPageDef" path="view.pageDefs.UserInviteesAddPageDef"/>
     <page id="view_ContactInviteesAddPageDef" path="view.pageDefs.ContactInviteesAddPageDef"/>
+    <page id="view_contactViewPagePageDef" path="view.pageDefs.contactViewPagePageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleDataControl" Package="model.eo"

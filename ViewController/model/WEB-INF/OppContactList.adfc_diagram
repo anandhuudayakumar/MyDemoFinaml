@@ -58,4 +58,41 @@
       <property
          name="sdm:polyPoints">L54,531.0,105.16797,334.48346,193.03516,R54</property>
    </ControlFlowCase>
+   <View
+      id="View6">
+      <property
+         name="activityId">contactViewPage</property>
+      <property
+         name="pageFragment">true</property>
+      <property
+         name="x">567.0</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>contactViewPage&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="y">264.73438</property>
+      <property
+         name="page">/contactViewPage.jsff</property>
+      <property
+         name="exceptionHandler">false</property>
+   </View>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase7"
+      from="View2"
+      to="View6">
+      <property
+         name="fromOutcome">contactView</property>
+      <property
+         name="sdm:polyPoints">R58,333.0,196.53516,526.0,264.66797,L50</property>
+   </ControlFlowCase>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase9"
+      from="View6"
+      to="View2">
+      <property
+         name="fromOutcome">backView</property>
+      <property
+         name="sdm:polyPoints">L54,524.7972,268.16797,333.0,200.03516,R62</property>
+   </ControlFlowCase>
 </SDM>

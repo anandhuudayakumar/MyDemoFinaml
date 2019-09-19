@@ -16,17 +16,31 @@
     <view id="oppContactEdit">
       <page>/oppContactEdit.jsff</page>
     </view>
+    <view id="contactViewPage">
+      <page>/contactViewPage.jsff</page>
+    </view>
     <control-flow-rule id="__1">
       <from-activity-id>oppContactList</from-activity-id>
       <control-flow-case id="__2">
         <from-outcome>edit</from-outcome>
         <to-activity-id>oppContactEdit</to-activity-id>
       </control-flow-case>
+      <control-flow-case id="__6">
+        <from-outcome>contactView</from-outcome>
+        <to-activity-id>contactViewPage</to-activity-id>
+      </control-flow-case>
     </control-flow-rule>
     <control-flow-rule id="__4">
       <from-activity-id>oppContactEdit</from-activity-id>
       <control-flow-case id="__5">
         <from-outcome>backEdit</from-outcome>
+        <to-activity-id>oppContactList</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__7">
+      <from-activity-id>contactViewPage</from-activity-id>
+      <control-flow-case id="__8">
+        <from-outcome>backView</from-outcome>
         <to-activity-id>oppContactList</to-activity-id>
       </control-flow-case>
     </control-flow-rule>

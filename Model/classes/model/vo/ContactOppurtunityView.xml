@@ -264,6 +264,11 @@
     <Item Value="OppId"/>
     <Item Value="ContactId"/>
   </AttrArray>
+  <ViewLinkAccessor
+    Name="ContactsView"
+    ViewLink="model.vo.opportunityMainContactSubContactViewLink"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
   <ResourceBundle>
     <PropertiesBundle
       PropertiesFile="model.ModelBundle"/>

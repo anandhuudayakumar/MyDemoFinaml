@@ -1,0 +1,61 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<SDM>
+   <OverallProperties
+      id="OverallProperties1"/>
+   <View
+      id="View2">
+      <property
+         name="activityId">oppContactList</property>
+      <property
+         name="pageFragment">true</property>
+      <property
+         name="x">292.0</property>
+      <property
+         name="start">true</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>oppContactList&lt;/b> (Default Activity)&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="y">189.60156</property>
+      <property
+         name="page">/oppContactList.jsff</property>
+      <property
+         name="exceptionHandler">false</property>
+   </View>
+   <View
+      id="View3">
+      <property
+         name="activityId">oppContactEdit</property>
+      <property
+         name="pageFragment">true</property>
+      <property
+         name="x">572.0</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>oppContactEdit&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="y">101.734375</property>
+      <property
+         name="page">/oppContactEdit.jsff</property>
+      <property
+         name="exceptionHandler">false</property>
+   </View>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase4"
+      from="View2"
+      to="View3">
+      <property
+         name="fromOutcome">edit</property>
+      <property
+         name="sdm:polyPoints">R46,333.0,186.03516,529.5114,98.16797,L46</property>
+   </ControlFlowCase>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase8"
+      from="View3"
+      to="View2">
+      <property
+         name="fromOutcome">backEdit</property>
+      <property
+         name="sdm:polyPoints">L54,531.0,105.16797,334.48346,193.03516,R54</property>
+   </ControlFlowCase>
+</SDM>

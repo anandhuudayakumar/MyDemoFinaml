@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.9.14" id="oppEditPageDef"
+                Package="view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="OpportunitiesView1" RangeSize="25" DataControl="AppModuleDataControl"
+              id="OpportunitiesView1Iterator"/>
+    <taskFlow id="notesTaskFlow1" taskFlowId="/WEB-INF/notesTaskFlow.xml#notesTaskFlow" activation="deferred"
+              xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
+    <taskFlow id="OppContactList1" taskFlowId="/WEB-INF/OppContactList.xml#OppContactList" activation="deferred"
+              xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
+    <taskFlow id="oppProductTaskFlow1" taskFlowId="/WEB-INF/oppProductTaskFlow.xml#oppProductTaskFlow"
+              activation="deferred" xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
+    <taskFlow id="opportunityTask1" taskFlowId="/WEB-INF/opportunityTask.xml#opportunityTask" activation="deferred"
+              xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
+    <taskFlow id="opportunityAppointmentTAskFlow1"
+              taskFlowId="/WEB-INF/opportunityAppointmentTAskFlow.xml#opportunityAppointmentTAskFlow"
+              activation="deferred" xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
+  </executables>
+  <bindings>
+    <attributeValues IterBinding="OpportunitiesView1Iterator" id="OppName">
+      <AttrNames>
+        <Item Value="OppName"/>
+      </AttrNames>
+    </attributeValues>
+    <list IterBinding="OpportunitiesView1Iterator" StaticList="false" Uses="LOV_Accountid" id="Accountid"
+          DTSupportsMRU="false" SelectItemValueMode="ListObject"/>
+    <attributeValues IterBinding="OpportunitiesView1Iterator" id="WinProb">
+      <AttrNames>
+        <Item Value="WinProb"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="OpportunitiesView1Iterator" id="BudgetAmount">
+      <AttrNames>
+        <Item Value="BudgetAmount"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="OpportunitiesView1Iterator" id="Budgeted">
+      <AttrNames>
+        <Item Value="Budgeted"/>
+      </AttrNames>
+    </attributeValues>
+    <list IterBinding="OpportunitiesView1Iterator" StaticList="false" Uses="LOV_SalesMeathod" id="SalesMeathod"
+          DTSupportsMRU="false" SelectItemValueMode="ListObject"/>
+    <list IterBinding="OpportunitiesView1Iterator" StaticList="false" Uses="LOV_SalesStage" id="SalesStage"
+          DTSupportsMRU="false" SelectItemValueMode="ListObject"/>
+    <list IterBinding="OpportunitiesView1Iterator" StaticList="false" Uses="LOV_SalesChannel" id="SalesChannel"
+          DTSupportsMRU="false" SelectItemValueMode="ListObject"/>
+    <list IterBinding="OpportunitiesView1Iterator" StaticList="false" Uses="LOV_RiskLevel" id="RiskLevel"
+          DTSupportsMRU="false" SelectItemValueMode="ListObject"/>
+    <list IterBinding="OpportunitiesView1Iterator" StaticList="false" Uses="LOV_DecisionLevel" id="DecisionLevel"
+          DTSupportsMRU="false" SelectItemValueMode="ListObject"/>
+    <attributeValues IterBinding="OpportunitiesView1Iterator" id="EstimatedDuration">
+      <AttrNames>
+        <Item Value="EstimatedDuration"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="OpportunitiesView1Iterator" id="CloseDate">
+      <AttrNames>
+        <Item Value="CloseDate"/>
+      </AttrNames>
+    </attributeValues>
+    <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AppModuleDataControl"/>
+    <action id="Rollback" RequiresUpdateModel="false" Action="rollbackTransaction" DataControl="AppModuleDataControl"/>
+    <listOfValues IterBinding="OpportunitiesView1Iterator" StaticList="false" Uses="LOV_PrimaryContact"
+                  id="PrimaryContact1"/>
+  </bindings>
+</pageDefinition>

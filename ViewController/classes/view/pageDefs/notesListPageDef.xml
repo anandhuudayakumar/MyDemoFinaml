@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.9.14" id="notesListPageDef"
+                Package="view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="AnandhuNotesView2" RangeSize="25" DataControl="AppModuleDataControl"
+              id="AnandhuNotesView2Iterator"/>
+    <searchRegion Criteria="name" Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer"
+                  Binds="AnandhuNotesView2Iterator" id="nameQuery"/>
+    <iterator Binds="AnandhuNotesView1" RangeSize="25" DataControl="AppModuleDataControl"
+              id="AnandhuNotesView1Iterator"/>
+  </executables>
+  <bindings>
+    <action IterBinding="AnandhuNotesView2Iterator" id="CreateInsert" RequiresUpdateModel="true"
+            Action="createInsertRow"/>
+    <tree IterBinding="AnandhuNotesView2Iterator" id="AnandhuNotesView2">
+      <nodeDefinition DefName="model.vo.AnandhuNotesView" Name="AnandhuNotesView20">
+        <AttrNames>
+          <Item Value="Notename"/>
+          <Item Value="Notes"/>
+          <Item Value="Data"/>
+          <Item Value="Time"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <attributeValues IterBinding="AnandhuNotesView2Iterator" id="Notename">
+      <AttrNames>
+        <Item Value="Notename"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="AnandhuNotesView2Iterator" id="Notes">
+      <AttrNames>
+        <Item Value="Notes"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="AnandhuNotesView2Iterator" id="Data">
+      <AttrNames>
+        <Item Value="Data"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="AnandhuNotesView2Iterator" id="Time">
+      <AttrNames>
+        <Item Value="Time"/>
+      </AttrNames>
+    </attributeValues>
+    <action id="Commit" DataControl="AppModuleDataControl" RequiresUpdateModel="true" Action="commitTransaction"/>
+    <attributeValues IterBinding="AnandhuNotesView1Iterator" id="Notename1">
+      <AttrNames>
+        <Item Value="Notename"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="AnandhuNotesView1Iterator" id="Data1">
+      <AttrNames>
+        <Item Value="Data"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="AnandhuNotesView1Iterator" id="Notes1">
+      <AttrNames>
+        <Item Value="Notes"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="AnandhuNotesView1Iterator" id="Time1">
+      <AttrNames>
+        <Item Value="Time"/>
+      </AttrNames>
+    </attributeValues>
+    <action IterBinding="AnandhuNotesView2Iterator" id="Delete" RequiresUpdateModel="false" Action="removeCurrentRow"/>
+  </bindings>
+</pageDefinition>

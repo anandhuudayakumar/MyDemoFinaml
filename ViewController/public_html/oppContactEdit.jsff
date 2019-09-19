@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+                xmlns:f="http://java.sun.com/jsf/core">
+  <af:panelBox text="Add Contact" id="pb1">
+    <f:facet name="toolbar">
+      <af:panelGroupLayout id="pgl1">
+        <af:button actionListener="#{bindings.Commit.execute}" text="Save" disabled="#{!bindings.Commit.enabled}"
+                   id="b1" action="backEdit"/>
+        <af:button actionListener="#{bindings.Rollback.execute}" text="Back" disabled="#{!bindings.Rollback.enabled}"
+                   immediate="true" id="b2" action="backEdit">
+          <af:resetActionListener/>
+        </af:button>
+        <f:facet name="separator">
+          <af:spacer width="10" height="10" id="s1"/>
+        </f:facet>
+      </af:panelGroupLayout>
+    </f:facet>
+    <af:panelFormLayout id="pfl1">
+      <af:inputComboboxListOfValues id="contactName1Id"
+                                    popupTitle="Search and Select: #{bindings.ContactName1.hints.label}"
+                                    value="#{bindings.ContactName1.inputValue}"
+                                    label="#{bindings.ContactName1.hints.label}"
+                                    model="#{bindings.ContactName1.listOfValuesModel}"
+                                    required="#{bindings.ContactName1.hints.mandatory}"
+                                    columns="#{bindings.ContactName1.hints.displayWidth}"
+                                    shortDesc="#{bindings.ContactName1.hints.tooltip}">
+        <f:validator binding="#{bindings.ContactName1.validator}"/>
+      </af:inputComboboxListOfValues>
+    </af:panelFormLayout>
+  </af:panelBox>
+</ui:composition>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Application xmlns="http://xmlns.oracle.com/adfm/application" version="12.2.1.9.14" id="DataBindings"
+             SeparateXMLFiles="false" Package="view" ClientType="Generic">
+  <definitionFactories>
+    <factory nameSpace="http://xmlns.oracle.com/adf/controller/binding"
+             className="oracle.adf.controller.internal.binding.TaskFlowBindingDefFactoryImpl"/>
+    <dtfactory className="oracle.adf.controller.internal.dtrt.binding.BindingDTObjectFactory"/>
+  </definitionFactories>
+  <pageMap>
+    <page path="/opportunityList.jsff" usageId="view_opportunityListPageDef"/>
+    <page path="/MyHome.jsf" usageId="view_MyHomePageDef"/>
+    <page path="/create.jsff" usageId="view_createPageDef"/>
+    <page path="/oppEdit.jsff" usageId="view_oppEditPageDef"/>
+    <page path="/notesList.jsff" usageId="view_notesListPageDef"/>
+    <page path="/oppContactList.jsff" usageId="view_oppContactListPageDef"/>
+    <page path="/oppContactEdit.jsff" usageId="view_oppContactEditPageDef"/>
+    <page path="/productList.jsff" usageId="view_productListPageDef"/>
+    <page path="/productEdit.jsff" usageId="view_productEditPageDef"/>
+    <page path="/productCreate.jsff" usageId="view_productCreatePageDef"/>
+    <page path="/oppTaskList.jsff" usageId="view_oppTaskListPageDef"/>
+    <page path="/oppTaskCreate.jsff" usageId="view_oppTaskCreatePageDef"/>
+    <page path="/oppTaskEdit.jsff" usageId="view_oppTaskEditPageDef"/>
+    <page path="/opportunityAppointmentLIst.jsff" usageId="view_opportunityAppointmentLIstPageDef"/>
+    <page path="/opportunityAppointmentCreate.jsff" usageId="view_opportunityAppointmentCreatePageDef"/>
+    <page path="/opportunityAppointmentEdit.jsff" usageId="view_opportunityAppointmentEditPageDef"/>
+    <page path="/UserInviteesAdd.jsff" usageId="view_UserInviteesAddPageDef"/>
+    <page path="/ContactInviteesAdd.jsff" usageId="view_ContactInviteesAddPageDef"/>
+  </pageMap>
+  <pageDefinitionUsages>
+    <page id="view_opportunityListPageDef" path="view.pageDefs.opportunityListPageDef"/>
+    <page id="view_MyHomePageDef" path="view.pageDefs.MyHomePageDef"/>
+    <page id="view_createPageDef" path="view.pageDefs.createPageDef"/>
+    <page id="view_oppEditPageDef" path="view.pageDefs.oppEditPageDef"/>
+    <page id="view_notesListPageDef" path="view.pageDefs.notesListPageDef"/>
+    <page id="view_oppContactListPageDef" path="view.pageDefs.oppContactListPageDef"/>
+    <page id="view_oppContactEditPageDef" path="view.pageDefs.oppContactEditPageDef"/>
+    <page id="view_productListPageDef" path="view.pageDefs.productListPageDef"/>
+    <page id="view_productEditPageDef" path="view.pageDefs.productEditPageDef"/>
+    <page id="view_productCreatePageDef" path="view.pageDefs.productCreatePageDef"/>
+    <page id="view_oppTaskListPageDef" path="view.pageDefs.oppTaskListPageDef"/>
+    <page id="view_oppTaskCreatePageDef" path="view.pageDefs.oppTaskCreatePageDef"/>
+    <page id="view_oppTaskEditPageDef" path="view.pageDefs.oppTaskEditPageDef"/>
+    <page id="view_opportunityAppointmentLIstPageDef" path="view.pageDefs.opportunityAppointmentLIstPageDef"/>
+    <page id="view_opportunityAppointmentCreatePageDef" path="view.pageDefs.opportunityAppointmentCreatePageDef"/>
+    <page id="view_opportunityAppointmentEditPageDef" path="view.pageDefs.opportunityAppointmentEditPageDef"/>
+    <page id="view_UserInviteesAddPageDef" path="view.pageDefs.UserInviteesAddPageDef"/>
+    <page id="view_ContactInviteesAddPageDef" path="view.pageDefs.ContactInviteesAddPageDef"/>
+  </pageDefinitionUsages>
+  <dataControlUsages>
+    <BC4JDataControl id="AppModuleDataControl" Package="model.eo"
+                     FactoryClass="oracle.adf.model.bc4j.DataControlFactoryImpl" SupportsTransactions="true"
+                     SupportsFindMode="true" SupportsRangesize="true" SupportsResetState="true"
+                     SupportsSortCollection="true" Configuration="AppModuleLocal" syncMode="Immediate"
+                     xmlns="http://xmlns.oracle.com/adfm/datacontrol"/>
+  </dataControlUsages>
+</Application>

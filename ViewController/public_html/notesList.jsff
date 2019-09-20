@@ -67,9 +67,8 @@
                 partialTriggers="::b1 ::b2" columnStretching="last">
         <af:column sortProperty="#{bindings.AnandhuNotesView2.hints.Notename.name}" filterable="true" sortable="true"
                    headerText="#{bindings.AnandhuNotesView2.hints.Notename.label}" id="resId1c1">
-          <af:link shortDesc="#{bindings.AnandhuNotesView2.hints.Notename.tooltip}" id="ot1" text="#{row.Notename}">
-            <af:showPopupBehavior popupId="::p2" triggerType="action"/>
-          </af:link>
+          <af:link shortDesc="#{bindings.AnandhuNotesView2.hints.Notename.tooltip}" id="ot1" text="#{row.Notename}"
+                   action="editNote"/>
         </af:column>
         <af:column sortProperty="#{bindings.AnandhuNotesView2.hints.Notes.name}" filterable="true" sortable="true"
                    headerText="#{bindings.AnandhuNotesView2.hints.Notes.label}" id="resId1c2">

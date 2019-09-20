@@ -15,13 +15,14 @@
         </f:facet>
       </af:panelGroupLayout>
     </f:facet>
-    <af:panelFormLayout id="pfl1" rows="10">
+    <af:panelFormLayout id="pfl1" rows="15">
       <af:inputText value="#{bindings.OppName.inputValue}" label="#{bindings.OppName.hints.label}"
                     required="#{bindings.OppName.hints.mandatory}" columns="#{bindings.OppName.hints.displayWidth}"
                     maximumLength="#{bindings.OppName.hints.precision}" shortDesc="#{bindings.OppName.hints.tooltip}"
                     id="it1" contentStyle="width:240px;">
         <f:validator binding="#{bindings.OppName.validator}"/>
       </af:inputText>
+      <af:spacer width="10" height="10" id="s10"/>
       <af:selectOneChoice value="#{bindings.Accountid.inputValue}" label="#{bindings.Accountid.label}"
                           required="#{bindings.Accountid.hints.mandatory}"
                           shortDesc="#{bindings.Accountid.hints.tooltip}" id="soc1" contentStyle="width:240px;">
@@ -36,12 +37,14 @@
         <f:validator binding="#{bindings.WinProb.validator}"/>
         <af:convertNumber groupingUsed="false" pattern="#{bindings.WinProb.format}"/>
       </af:inputText>
+      <af:spacer width="10" height="10" id="s9"/>
       <af:selectOneChoice value="#{bindings.PrimaryContact.inputValue}" label="#{bindings.PrimaryContact.label}"
                           required="#{bindings.PrimaryContact.hints.mandatory}"
                           shortDesc="#{bindings.PrimaryContact.hints.tooltip}" id="soc2" contentStyle="width:240px;">
         <f:selectItems value="#{bindings.PrimaryContact.items}" id="si2"/>
         <f:validator binding="#{bindings.PrimaryContact.validator}"/>
       </af:selectOneChoice>
+      <af:spacer width="10" height="10" id="s11"/>
       <af:inputText value="#{bindings.BudgetAmount.inputValue}" label="#{bindings.BudgetAmount.hints.label}"
                     required="#{bindings.BudgetAmount.hints.mandatory}"
                     columns="#{bindings.BudgetAmount.hints.displayWidth}"
@@ -50,6 +53,7 @@
         <f:validator binding="#{bindings.BudgetAmount.validator}"/>
         <af:convertNumber groupingUsed="false" pattern="#{bindings.BudgetAmount.format}"/>
       </af:inputText>
+      <af:spacer width="10" height="10" id="s12"/>
       <af:inputText value="#{bindings.Budgeted.inputValue}" label="#{bindings.Budgeted.hints.label}"
                     required="#{bindings.Budgeted.hints.mandatory}" columns="#{bindings.Budgeted.hints.displayWidth}"
                     maximumLength="#{bindings.Budgeted.hints.precision}" shortDesc="#{bindings.Budgeted.hints.tooltip}"
@@ -99,6 +103,7 @@
                     shortDesc="#{bindings.EstimatedDuration.hints.tooltip}" id="it6" contentStyle="width:240px;">
         <f:validator binding="#{bindings.EstimatedDuration.validator}"/>
       </af:inputText>
+      <af:spacer width="10" height="10" id="s13"/>
       <af:inputDate value="#{bindings.CloseDate.inputValue}" label="#{bindings.CloseDate.hints.label}"
                     required="#{bindings.CloseDate.hints.mandatory}" columns="#{bindings.CloseDate.hints.displayWidth}"
                     shortDesc="#{bindings.CloseDate.hints.tooltip}" id="id1" contentStyle="width:240px;">

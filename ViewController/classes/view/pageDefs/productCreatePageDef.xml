@@ -8,11 +8,9 @@
               id="RevenueItemsView3Iterator"/>
   </executables>
   <bindings>
-    <attributeValues IterBinding="RevenueItemsView3Iterator" id="ProductId">
-      <AttrNames>
-        <Item Value="ProductId"/>
-      </AttrNames>
-    </attributeValues>
+    <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AppModuleDataControl"/>
+    <action id="Rollback" RequiresUpdateModel="false" Action="rollbackTransaction" DataControl="AppModuleDataControl"/>
+    <listOfValues IterBinding="RevenueItemsView3Iterator" StaticList="false" Uses="LOV_ProductId" id="ProductId"/>
     <attributeValues IterBinding="RevenueItemsView3Iterator" id="Quantity">
       <AttrNames>
         <Item Value="Quantity"/>
@@ -38,7 +36,5 @@
         <Item Value="SalesForecast"/>
       </AttrNames>
     </attributeValues>
-    <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AppModuleDataControl"/>
-    <action id="Rollback" RequiresUpdateModel="false" Action="rollbackTransaction" DataControl="AppModuleDataControl"/>
   </bindings>
 </pageDefinition>

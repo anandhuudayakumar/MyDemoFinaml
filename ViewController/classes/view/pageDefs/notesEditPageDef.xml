@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.9.14" id="notesEditPageDef"
+                Package="view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="AnandhuNotesView2" RangeSize="25" DataControl="AppModuleDataControl"
+              id="AnandhuNotesView2Iterator"/>
+  </executables>
+  <bindings>
+    <attributeValues IterBinding="AnandhuNotesView2Iterator" id="Notename">
+      <AttrNames>
+        <Item Value="Notename"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="AnandhuNotesView2Iterator" id="Notes">
+      <AttrNames>
+        <Item Value="Notes"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="AnandhuNotesView2Iterator" id="Time">
+      <AttrNames>
+        <Item Value="Time"/>
+      </AttrNames>
+    </attributeValues>
+    <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AppModuleDataControl"/>
+    <action id="Rollback" RequiresUpdateModel="false" Action="rollbackTransaction" DataControl="AppModuleDataControl"/>
+  </bindings>
+</pageDefinition>

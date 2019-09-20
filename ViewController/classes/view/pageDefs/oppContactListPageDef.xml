@@ -8,6 +8,8 @@
               id="ContactOppurtunityView3Iterator"/>
     <searchRegion Criteria="name" Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer"
                   Binds="ContactOppurtunityView3Iterator" id="nameQuery"/>
+    <iterator Binds="ContactOppurtunityView1" RangeSize="10" DataControl="AppModuleDataControl"
+              id="ContactOppurtunityView1Iterator"/>
   </executables>
   <bindings>
     <action IterBinding="ContactOppurtunityView3Iterator" id="CreateInsert" RequiresUpdateModel="true"
@@ -20,8 +22,9 @@
         </AttrNames>
       </nodeDefinition>
     </tree>
-    <action IterBinding="ContactOppurtunityView3Iterator" id="Delete" RequiresUpdateModel="false"
-            Action="removeCurrentRow"/>
+    <action id="Delete" RequiresUpdateModel="false"
+            Action="removeCurrentRow" DataControl="AppModuleDataControl" IterBinding="ContactOppurtunityView1Iterator"
+            InstanceName="AppModuleDataControl.ContactOppurtunityView1"/>
     <action id="Commit" DataControl="AppModuleDataControl" RequiresUpdateModel="true" Action="commitTransaction"/>
   </bindings>
 </pageDefinition>

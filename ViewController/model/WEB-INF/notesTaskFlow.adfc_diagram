@@ -15,10 +15,47 @@
       <property
          name="description">&lt;html>&lt;p>&lt;b>notesList&lt;/b> (Default Activity)&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
       <property
-         name="y">223.60156</property>
+         name="y">223.46875</property>
       <property
          name="page">/notesList.jsff</property>
       <property
          name="exceptionHandler">false</property>
    </View>
+   <View
+      id="View3">
+      <property
+         name="activityId">notesEdit</property>
+      <property
+         name="pageFragment">true</property>
+      <property
+         name="x">604.0</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>notesEdit&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="y">206.86719</property>
+      <property
+         name="page">/notesEdit.jsff</property>
+      <property
+         name="exceptionHandler">false</property>
+   </View>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase4"
+      from="View2"
+      to="View3">
+      <property
+         name="fromOutcome">editNote</property>
+      <property
+         name="sdm:polyPoints">R46,370.0,219.90234,562.6993,203.30078,L46</property>
+   </ControlFlowCase>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase5"
+      from="View3"
+      to="View2">
+      <property
+         name="fromOutcome">backNote</property>
+      <property
+         name="sdm:polyPoints">L54,563.0,210.30078,370.3005,226.90234,R54</property>
+   </ControlFlowCase>
 </SDM>

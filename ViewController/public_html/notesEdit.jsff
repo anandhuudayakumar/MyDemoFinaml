@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+                xmlns:f="http://java.sun.com/jsf/core">
+  <af:panelBox text="Edit Note" id="pb1">
+    <f:facet name="toolbar">
+      <af:panelGroupLayout id="pgl1">
+        <af:button actionListener="#{bindings.Commit.execute}" text="Save" 
+                   id="b1" action="backNote"/>
+        <af:button actionListener="#{bindings.Rollback.execute}" text="Back" 
+                   immediate="true" id="b2" action="backNote">
+          <af:resetActionListener/>
+        </af:button>
+      </af:panelGroupLayout>
+    </f:facet>
+    <af:panelFormLayout id="pfl1">
+      <af:inputText value="#{bindings.Notename.inputValue}" label="#{bindings.Notename.hints.label}"
+                    required="#{bindings.Notename.hints.mandatory}" columns="#{bindings.Notename.hints.displayWidth}"
+                    maximumLength="#{bindings.Notename.hints.precision}" shortDesc="#{bindings.Notename.hints.tooltip}"
+                    id="it1">
+        <f:validator binding="#{bindings.Notename.validator}"/>
+      </af:inputText>
+      <af:inputText value="#{bindings.Notes.inputValue}" label="#{bindings.Notes.hints.label}"
+                    required="#{bindings.Notes.hints.mandatory}" columns="#{bindings.Notes.hints.displayWidth}"
+                    maximumLength="#{bindings.Notes.hints.precision}" shortDesc="#{bindings.Notes.hints.tooltip}"
+                    id="it2" rows="5">
+        <f:validator binding="#{bindings.Notes.validator}"/>
+      </af:inputText>
+      <af:inputDate value="#{bindings.Time.inputValue}" label="#{bindings.Time.hints.label}"
+                    required="#{bindings.Time.hints.mandatory}" columns="#{bindings.Time.hints.displayWidth}"
+                    shortDesc="#{bindings.Time.hints.tooltip}" id="id1">
+        <f:validator binding="#{bindings.Time.validator}"/>
+        <af:convertDateTime pattern="#{bindings.Time.format}"/>
+      </af:inputDate>
+    </af:panelFormLayout>
+  </af:panelBox>
+</ui:composition>

@@ -31,8 +31,14 @@
       <Item Value="ContactId"/>
     </AttrArray>
     <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="DerivedAttrNames">
+      <Item Value="ContactName"/>
+      <Item Value="Email"/>
+    </AttrArray>
     <AttrArray Name="ListAttrNames">
       <Item Value="ContactId"/>
+      <Item Value="ContactName"/>
+      <Item Value="Email"/>
     </AttrArray>
     <AttrArray Name="ListDisplayAttrNames">
       <Item Value="ContactName"/>
@@ -110,12 +116,20 @@
     LOVName="LOV_ContactId">
     <Properties>
       <SchemaBasedProperties>
-        <CONTROLTYPE
-          Value="combo_lov"/>
         <DISPLAYWIDTH
           Value="30"/>
+        <CONTROLTYPE
+          Value="combo_lov"/>
       </SchemaBasedProperties>
     </Properties>
+    <Dependencies>
+      <Item
+        Value="ContactName"
+        Type="notify"/>
+      <Item
+        Value="Email"
+        Type="notify"/>
+    </Dependencies>
   </ViewAttribute>
   <ViewAttribute
     Name="CreatedBy"
@@ -203,6 +217,11 @@
           Value="30"/>
       </SchemaBasedProperties>
     </Properties>
+    <Dependencies>
+      <Item
+        Value="ContactId"
+        Type="notify"/>
+    </Dependencies>
   </ViewAttribute>
   <ViewAttribute
     Name="Email"

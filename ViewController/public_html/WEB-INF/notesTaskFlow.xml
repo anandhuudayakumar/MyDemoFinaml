@@ -23,6 +23,23 @@
     <view id="notesList">
       <page>/notesList.jsff</page>
     </view>
+    <view id="notesEdit">
+      <page>/notesEdit.jsff</page>
+    </view>
+    <control-flow-rule id="__4">
+      <from-activity-id>notesList</from-activity-id>
+      <control-flow-case id="__5">
+        <from-outcome>editNote</from-outcome>
+        <to-activity-id>notesEdit</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__6">
+      <from-activity-id>notesEdit</from-activity-id>
+      <control-flow-case id="__7">
+        <from-outcome>backNote</from-outcome>
+        <to-activity-id>notesList</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
     <use-page-fragments/>
   </task-flow-definition>
 </adfc-config>

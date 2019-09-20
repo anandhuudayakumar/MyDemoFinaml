@@ -77,7 +77,7 @@
                       rowBandingInterval="0" selectedRowKeys="#{bindings.UserInviteesView5.collectionModel.selectedRow}"
                       selectionListener="#{bindings.UserInviteesView5.collectionModel.makeCurrent}"
                       rowSelection="single" fetchSize="#{bindings.UserInviteesView5.rangeSize}" id="resId1"
-                      partialTriggers="::b4 ::b5">
+                      partialTriggers="::b4 ::b5" columnStretching="column:resId1c1">
               <af:column sortProperty="#{bindings.UserInviteesView5.hints.Name.name}" sortable="true"
                          headerText="#{bindings.UserInviteesView5.hints.Name.label}" id="resId1c1">
                 <af:outputText value="#{row.Name}" shortDesc="#{bindings.UserInviteesView5.hints.Name.tooltip}"
@@ -124,7 +124,7 @@
                       selectedRowKeys="#{bindings.ContactInviteesView4.collectionModel.selectedRow}"
                       selectionListener="#{bindings.ContactInviteesView4.collectionModel.makeCurrent}"
                       rowSelection="single" fetchSize="#{bindings.ContactInviteesView4.rangeSize}" id="resId2"
-                      partialTriggers="::b3 ::b6">
+                      partialTriggers="::b3 ::b6" columnStretching="column:resId2c1">
               <af:column sortProperty="#{bindings.ContactInviteesView4.hints.Name.name}" sortable="true"
                          headerText="#{bindings.ContactInviteesView4.hints.Name.label}" id="resId2c1">
                 <af:outputText value="#{row.Name}" shortDesc="#{bindings.ContactInviteesView4.hints.Name.tooltip}"

@@ -17,6 +17,33 @@
     Name="bindProductName"
     Kind="viewcriteria"
     Type="java.lang.String"/>
+  <ViewAccessor
+    Name="PRODUCT"
+    ViewObjectName="model.vo.AnandhuLookupView"
+    RowLevelBinds="true">
+    <ViewCriteriaUsage
+      Name="PRODUCT"
+      FullName="model.vo.AnandhuLookupView.PRODUCT"/>
+  </ViewAccessor>
+  <ListBinding
+    Name="LOV_ProductId"
+    ListVOName="PRODUCT"
+    ComboRowCountHint="10"
+    NullValueFlag="none"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="ProductId"/>
+    </AttrArray>
+    <AttrArray Name="AttrExpressions"/>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="Data"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="Data"/>
+    </AttrArray>
+    <DisplayCriteria
+      Name="PRODUCT"/>
+  </ListBinding>
   <EntityUsage
     Name="RevenueItems"
     Entity="model.eo.RevenueItems"/>
@@ -103,11 +130,14 @@
     PrecisionRule="true"
     EntityAttrName="ProductId"
     EntityUsage="RevenueItems"
-    AliasName="PRODUCT_ID">
+    AliasName="PRODUCT_ID"
+    LOVName="LOV_ProductId">
     <Properties>
       <SchemaBasedProperties>
         <LABEL
           ResId="model.vo.RevenueItemsView.ProductId_LABEL"/>
+        <CONTROLTYPE
+          Value="combo_lov"/>
       </SchemaBasedProperties>
     </Properties>
   </ViewAttribute>

@@ -10,11 +10,7 @@
   <bindings>
     <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AppModuleDataControl"/>
     <action id="Rollback" RequiresUpdateModel="false" Action="rollbackTransaction" DataControl="AppModuleDataControl"/>
-    <attributeValues IterBinding="RevenueItemsView3Iterator" id="ProductId">
-      <AttrNames>
-        <Item Value="ProductId"/>
-      </AttrNames>
-    </attributeValues>
+    <listOfValues IterBinding="RevenueItemsView3Iterator" StaticList="false" Uses="LOV_ProductId" id="ProductId"/>
     <attributeValues IterBinding="RevenueItemsView3Iterator" id="Quantity">
       <AttrNames>
         <Item Value="Quantity"/>

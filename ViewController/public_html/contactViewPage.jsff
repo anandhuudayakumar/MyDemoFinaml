@@ -4,15 +4,15 @@
   <af:panelBox text="Edit Contact" id="pb1">
     <f:facet name="toolbar">
       <af:panelGroupLayout id="pgl1">
-        <af:button actionListener="#{bindings.Commit.execute}" text="Save" disabled="#{!bindings.Commit.enabled}"
+        <af:button actionListener="#{bindings.Commit.execute}" text="Save" 
                    id="b1" action="backView"/>
-        <af:button actionListener="#{bindings.Rollback.execute}" text="Back" disabled="#{!bindings.Rollback.enabled}"
+        <af:button actionListener="#{bindings.Rollback.execute}" text="Back" 
                    immediate="true" id="b2" action="backView">
           <af:resetActionListener/>
         </af:button>
       </af:panelGroupLayout>
     </f:facet>
-    <af:panelFormLayout id="pfl1">
+    <af:panelFormLayout id="pfl1" rows="6">
       <af:inputText value="#{bindings.ContactName.inputValue}" label="#{bindings.ContactName.hints.label}"
                     required="#{bindings.ContactName.hints.mandatory}"
                     columns="#{bindings.ContactName.hints.displayWidth}"

@@ -205,7 +205,8 @@
     EntityAttrName="OppId"
     EntityUsage="Opportunities"
     AliasName="OPP_ID"
-    IsUpdateable="while_insert"/>
+    IsUpdateable="while_insert"
+    IsQueriable="false"/>
   <ViewAttribute
     Name="WinProb"
     PrecisionRule="true"
@@ -453,6 +454,8 @@
     EntityAttrName="OppName"
     EntityUsage="Opportunities"
     AliasName="OPP_NAME">
+    
+    
     <Properties>
       <SchemaBasedProperties>
         <DISPLAYWIDTH

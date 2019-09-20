@@ -13,23 +13,25 @@
       </af:panelGroupLayout>
     </f:facet>
     <af:panelFormLayout id="pfl1">
-      <af:inputText value="#{bindings.ProductId.inputValue}" label="#{bindings.ProductId.hints.label}"
-                    required="#{bindings.ProductId.hints.mandatory}" columns="#{bindings.ProductId.hints.displayWidth}"
-                    maximumLength="#{bindings.ProductId.hints.precision}"
-                    shortDesc="#{bindings.ProductId.hints.tooltip}" id="it1" contentStyle="width:240px;">
+      <af:inputComboboxListOfValues id="productIdId" popupTitle="Search and Select: #{bindings.ProductId.hints.label}"
+                                    value="#{bindings.ProductId.inputValue}" label="#{bindings.ProductId.hints.label}"
+                                    model="#{bindings.ProductId.listOfValuesModel}"
+                                    required="#{bindings.ProductId.hints.mandatory}"
+                                    columns="#{bindings.ProductId.hints.displayWidth}"
+                                    shortDesc="#{bindings.ProductId.hints.tooltip}">
         <f:validator binding="#{bindings.ProductId.validator}"/>
-      </af:inputText>
+      </af:inputComboboxListOfValues>
       <af:inputText value="#{bindings.Quantity.inputValue}" label="#{bindings.Quantity.hints.label}"
                     required="#{bindings.Quantity.hints.mandatory}" columns="#{bindings.Quantity.hints.displayWidth}"
                     maximumLength="#{bindings.Quantity.hints.precision}" shortDesc="#{bindings.Quantity.hints.tooltip}"
-                    id="it2">
+                    id="it1">
         <f:validator binding="#{bindings.Quantity.validator}"/>
         <af:convertNumber groupingUsed="false" pattern="#{bindings.Quantity.format}"/>
       </af:inputText>
       <af:inputText value="#{bindings.Revenue.inputValue}" label="#{bindings.Revenue.hints.label}"
                     required="#{bindings.Revenue.hints.mandatory}" columns="#{bindings.Revenue.hints.displayWidth}"
                     maximumLength="#{bindings.Revenue.hints.precision}" shortDesc="#{bindings.Revenue.hints.tooltip}"
-                    id="it3">
+                    id="it2">
         <f:validator binding="#{bindings.Revenue.validator}"/>
         <af:convertNumber groupingUsed="false" pattern="#{bindings.Revenue.format}"/>
       </af:inputText>
@@ -37,7 +39,7 @@
                     required="#{bindings.BestCaseRevenue.hints.mandatory}"
                     columns="#{bindings.BestCaseRevenue.hints.displayWidth}"
                     maximumLength="#{bindings.BestCaseRevenue.hints.precision}"
-                    shortDesc="#{bindings.BestCaseRevenue.hints.tooltip}" id="it4">
+                    shortDesc="#{bindings.BestCaseRevenue.hints.tooltip}" id="it3">
         <f:validator binding="#{bindings.BestCaseRevenue.validator}"/>
         <af:convertNumber groupingUsed="false" pattern="#{bindings.BestCaseRevenue.format}"/>
       </af:inputText>
@@ -45,7 +47,7 @@
                     required="#{bindings.WorstCaseRevenue.hints.mandatory}"
                     columns="#{bindings.WorstCaseRevenue.hints.displayWidth}"
                     maximumLength="#{bindings.WorstCaseRevenue.hints.precision}"
-                    shortDesc="#{bindings.WorstCaseRevenue.hints.tooltip}" id="it5">
+                    shortDesc="#{bindings.WorstCaseRevenue.hints.tooltip}" id="it4">
         <f:validator binding="#{bindings.WorstCaseRevenue.validator}"/>
         <af:convertNumber groupingUsed="false" pattern="#{bindings.WorstCaseRevenue.format}"/>
       </af:inputText>
@@ -53,7 +55,7 @@
                     required="#{bindings.SalesForecast.hints.mandatory}"
                     columns="#{bindings.SalesForecast.hints.displayWidth}"
                     maximumLength="#{bindings.SalesForecast.hints.precision}"
-                    shortDesc="#{bindings.SalesForecast.hints.tooltip}" id="it6">
+                    shortDesc="#{bindings.SalesForecast.hints.tooltip}" id="it5">
         <f:validator binding="#{bindings.SalesForecast.validator}"/>
       </af:inputText>
     </af:panelFormLayout>

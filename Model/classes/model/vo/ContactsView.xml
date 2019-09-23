@@ -40,6 +40,10 @@
     EntityAttrName="ContactName"
     EntityUsage="Contacts"
     AliasName="CONTACT_NAME">
+    <TransientExpression
+      Name="ExpressionScript"
+      trustMode="untrusted"
+      CodeSourceName="ContactsViewRow"/>
     <Properties>
       <SchemaBasedProperties>
         <LABEL

@@ -122,14 +122,6 @@
           Value="combo_lov"/>
       </SchemaBasedProperties>
     </Properties>
-    <Dependencies>
-      <Item
-        Value="ContactName"
-        Type="notify"/>
-      <Item
-        Value="Email"
-        Type="notify"/>
-    </Dependencies>
   </ViewAttribute>
   <ViewAttribute
     Name="CreatedBy"
@@ -217,11 +209,6 @@
           Value="30"/>
       </SchemaBasedProperties>
     </Properties>
-    <Dependencies>
-      <Item
-        Value="ContactId"
-        Type="notify"/>
-    </Dependencies>
   </ViewAttribute>
   <ViewAttribute
     Name="Email"

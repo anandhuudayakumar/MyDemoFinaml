@@ -8,7 +8,6 @@
   </executables>
   <bindings>
     <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AppModuleDataControl"/>
-    <action id="Rollback" RequiresUpdateModel="false" Action="rollbackTransaction" DataControl="AppModuleDataControl"/>
     <listOfValues IterBinding="TasksView2Iterator" StaticList="false" Uses="LOV_AccountNameTrans"
                   id="AccountNameTrans"/>
     <listOfValues IterBinding="TasksView2Iterator" StaticList="false" Uses="LOV_ContactNameTrans"

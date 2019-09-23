@@ -40,7 +40,7 @@
       <af:spacer width="10" height="10" id="s9"/>
       <af:selectOneChoice value="#{bindings.PrimaryContact.inputValue}" label="#{bindings.PrimaryContact.label}"
                           required="#{bindings.PrimaryContact.hints.mandatory}"
-                          shortDesc="#{bindings.PrimaryContact.hints.tooltip}" id="soc2" contentStyle="width:240px;">
+                          shortDesc="#{bindings.PrimaryContact.hints.tooltip}" id="soc2" contentStyle="width:210px;">
         <f:selectItems value="#{bindings.PrimaryContact.items}" id="si2"/>
         <f:validator binding="#{bindings.PrimaryContact.validator}"/>
       </af:selectOneChoice>

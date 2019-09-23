@@ -54,7 +54,7 @@
                                         required="#{bindings.PrimaryContact1.hints.mandatory}"
                                         columns="#{bindings.PrimaryContact1.hints.displayWidth}"
                                         shortDesc="#{bindings.PrimaryContact1.hints.tooltip}"
-                                        contentStyle="width:240px;">
+                                        contentStyle="width:210px;">
             <f:validator binding="#{bindings.PrimaryContact1.validator}"/>
           </af:inputComboboxListOfValues>
           <af:spacer width="10" height="10" id="s7"/>
@@ -107,6 +107,7 @@
             <f:selectItems value="#{bindings.DecisionLevel.items}" id="si7"/>
             <f:validator binding="#{bindings.DecisionLevel.validator}"/>
           </af:selectOneChoice>
+          <af:spacer width="10" height="10" id="s4"/>
           <af:inputText value="#{bindings.EstimatedDuration.inputValue}"
                         label="#{bindings.EstimatedDuration.hints.label}"
                         required="#{bindings.EstimatedDuration.hints.mandatory}"
@@ -115,7 +116,7 @@
                         shortDesc="#{bindings.EstimatedDuration.hints.tooltip}" id="it5" contentStyle="width:240px;">
             <f:validator binding="#{bindings.EstimatedDuration.validator}"/>
           </af:inputText>
-          <af:spacer width="10" height="10" id="s4"/>
+          <af:spacer width="10" height="10" id="s13"/>
           <af:inputDate value="#{bindings.CloseDate.inputValue}" label="#{bindings.CloseDate.hints.label}"
                         required="#{bindings.CloseDate.hints.mandatory}"
                         columns="#{bindings.CloseDate.hints.displayWidth}"

@@ -1,0 +1,20 @@
+//Groovy Scripts for model.vo.ContactOppurtunityView
+
+package model.vo
+
+import oracle.jbo.script.annotation.TransientValueExpression;
+import oracle.jbo.script.annotation.RefreshExpression;
+
+@TransientValueExpression(attributeName="ContactName")
+def ContactName_ExpressionScript_Expression()
+{
+ContactsView?.ContactName
+}
+
+
+@RefreshExpression(attributeName="ContactName")
+def ContactName_RecalcExpressionScript_RecalcExpression()
+{
+ContactsView?.ContactName
+}
+

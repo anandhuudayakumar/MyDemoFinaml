@@ -6,10 +6,7 @@
       <af:panelGroupLayout id="pgl1">
         <af:button actionListener="#{bindings.Commit.execute}" text="Save" 
                    id="b1" action="backEdit"/>
-        <af:button actionListener="#{bindings.Rollback.execute}" text="Back"
-                    immediate="true" id="b2" action="backEdit">
-          <af:resetActionListener/>
-        </af:button>
+        <af:button text="Back" id="b3" action="backEdit"/>
       </af:panelGroupLayout>
     </f:facet>
     <af:panelFormLayout id="pfl1">
